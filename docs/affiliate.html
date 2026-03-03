@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Affiliate Resources - MVP</title>
+<style>
+body{font-family:Arial, sans-serif; max-width:900px; margin:0 auto; padding:20px; color:#333}
+header{text-align:center; padding:14px 0; border-bottom:1px solid #eee}
+h1{font-size:26px}
+.card{border:1px solid #eee; padding:16px; border-radius:6px; margin:12px 0; background:#fafafa}
+.cta{display:inline-block; padding:8px 12px; background:#1a73e8; color:#fff; border-radius:6px; text-decoration:none}
+form{ margin-top:14px }
+input[type="email"]{ padding:8px; width:260px; max-width:100%; }
+button{ padding:9px 12px; background:#4caf50; color:white; border:none; border-radius:6px; }
+</style>
+</head>
+<body>
+<header>
+<h1>Affiliate Resources Landing</h1>
+</header>
+
+<section class="card">
+<h2>Goal</h2>
+<p>A lean hub linking to high-commission affiliate programs and a couple of entry-level digital products.</p>
+</section>
+
+<section class="card">
+<h3>What you’ll find</h3>
+<ul>
+<li>3–5 affiliate links with short notes on why they matter</li>
+<li>1–2 evergreen posts linking to those resources</li>
+<li>A simple sign-up form for updates and promos</li>
+<li>A teaser for Digital Products (two products at $9–$29)</li>
+</ul>
+</section>
+
+<section class="card">
+<h3>CTA</h3>
+<p>Explore tools that actually help you grow your business</p>
+<p>Get updates and promos in your inbox</p>
+</section>
+
+<section style="margin-top:16px;">
+<form onsubmit="handleSignup(event)">
+<label for="email">Get updates:</label><br/>
+<input id="email" type="email" placeholder="you@example.com" required/>
+<button type="submit">Sign up</button>
+</form>
+<p id="signupMsg" style="color:green; display:none; margin-top:6px;">Thanks! You’re on the list (local save).</p>
+</section>
+
+<script>
+function handleSignup(e){
+e.preventDefault();
+const email = document.getElementById('email').value;
+if(!email) return;
+const list = JSON.parse(localStorage.getItem('apex_affiliate_signups')||'[]');
+list.push({email, t: new Date().toISOString()});
+localStorage.setItem('apex_affiliate_signups', JSON.stringify(list));
+document.getElementById('signupMsg').style.display='block';
+e.target.reset();
+}
+</script>
+</body>
+</html>

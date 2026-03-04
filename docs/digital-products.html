@@ -3,26 +3,65 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Digital Products - MVP</title>
+  <title>Digital Products - Apex AI</title>
   <style>
-    body{font-family:Arial, sans-serif; background:#f4f4f9; color:#222; padding:20px}
-    h1{font-size:28px}
-    .product{ border:1px solid #ddd; padding:16px; border-radius:8px; margin:12px 0; background:#fff}
-    .cta{display:inline-block; padding:10px 14px; background:#2563eb; color:white; text-decoration:none; border-radius:6px}
+    :root{--bg:#f4f4f9;--fg:#1a1f2a;--brand:#2563eb;--card:#fff;--price:#22c55e}
+    *{box-sizing:border-box}
+    body{font-family:Arial,sans-serif;margin:0;background:var(--bg);color:var(--fg)}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .hero{background:url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1600&q=60") center/cover no-repeat;color:#fff;height:320px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
+    .hero:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5)}
+    .hero-content{position:relative;z-index:1}
+    .hero h1{font-size:32px;margin:0 0 10px}
+    nav{display:flex;justify-content:center;gap:15px;padding:20px 0}
+    nav a{color:var(--brand);text-decoration:none;font-weight:600}
+    .products{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin:30px 0}
+    .product{background:var(--card);border-radius:12px;padding:25px;box-shadow:0 2px 8px rgba(0,0,0,.08);text-align:center}
+    .product img{width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px}
+    .product h3{margin:10px 0;font-size:22px}
+    .price{color:var(--price);font-size:28px;font-weight:bold;margin:10px 0}
+    .cta{display:inline-block;padding:12px 25px;background:var(--brand);color:#fff;text-decoration:none;border-radius:8px;margin-top:15px;font-weight:600}
+    .cta:hover{opacity:.9}
+    footer{text-align:center;padding:40px 0;color:#666}
+    @media(max-width:900px){.products{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <h1>Digital Products - MVP</h1>
-  <p>Two low-cost digital products with a simple checkout path (Gumroad/Stripe).</p>
-  <div class="product">
-    <h2>AI Starter Toolkit</h2>
-    <p>Templates, checklists, and quick-start guides.</p>
-    <a class="cta" href="https://gumroad.com/l/ai-starter-toolkit">Buy for $9</a>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Digital Products</h1>
+      <p>Tools to accelerate your business</p>
+    </div>
+  </header>
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="affiliate.html">Affiliates</a>
+    <a href="digital-products.html">Products</a>
+  </nav>
+  
+  <div class="container">
+    <div class="products">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1517245386240-72d4a6a6a6ee?auto=format&fit=crop&w=800&q=60" alt="AI Starter Toolkit"/>
+        <h3>AI Starter Toolkit</h3>
+        <p>Everything you need to launch AI-powered workflows. Templates, checklists, and step-by-step guides.</p>
+        <div class="price">$9</div>
+        <a class="cta" href="https://gumroad.com/l/ai-starter-toolkit">Buy Now</a>
+      </div>
+      
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5d3?auto=format&fit=crop&w=800&q=60" alt="Templates Pack"/>
+        <h3>Business Templates Pack</h3>
+        <p>Ready-to-use templates for operations, planning, and growth. Save hours of setup time.</p>
+        <div class="price">$19</div>
+        <a class="cta" href="https://gumroad.com/l/business-templates-pack">Buy Now</a>
+      </div>
+    </div>
   </div>
-  <div class="product">
-    <h2>Simple Templates Pack</h2>
-    <p>Business templates you can use instantly.</p>
-    <a class="cta" href="https://gumroad.com/l/simple-templates-pack">Buy for $9-$29</a>
-  </div>
+  
+  <footer>
+    <p>Secure checkout via Gumroad. Instant download.</p>
+  </footer>
 </body>
 </html>

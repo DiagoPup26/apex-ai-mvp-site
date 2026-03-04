@@ -1,7 +1,54 @@
-<!doctype html><html lang="en">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Apex AI MVP Landing</title></head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Apex AI MVP Landing</title>
+  <style>
+    :root{--bg:#f4f4f9;--fg:#1a1f2a;--brand:#2563eb;--card:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Arial,sans-serif;margin:0;background:var(--bg);color:var(--fg)}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .hero{background:url("https://images.unsplash.com/photo-1496307042754-b4d6183878e6?auto=format&fit=crop&w=1600&q=60") center/cover no-repeat;color:#fff;height:360px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
+    .hero:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.4)}
+    .hero-content{position:relative;z-index:1}
+    .hero h1{font-size:clamp(28px,4vw,48px);margin:0 0 10px}
+    .hero p{font-size:clamp(14px,2vw,18px);margin:0 0 20px}
+    .cta{display:inline-block;padding:12px 20px;background:var(--brand);color:#fff;text-decoration:none;border-radius:8px;margin:5px}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:30px 0}
+    .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .card img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:12px}
+    @media(max-width:900px){.cards{grid-template-columns:1fr}}
+    footer{text-align:center;padding:40px 0;color:#666}
+  </style>
+</head>
 <body>
-<h1>Apex AI MVP Landing</h1>
-<p>Two revenue MVPs: Affiliate Marketing and Digital Products. The Thrill561 is a hobby. Heartland Rentals is on hold.</p>
+  <header class="hero">
+    <div class="hero-content container">
+      <h1>Apex AI Solutions</h1>
+      <p>Build your business with AI-powered tools and resources</p>
+      <a class="cta" href="affiliate.html">Explore Affiliate Resources</a>
+      <a class="cta" href="digital-products.html" style="background:#0b5ed7">Shop Digital Products</a>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1525966222142-9b5ed5a0d2bd?auto=format&fit=crop&w=800&q=60" alt="Team planning"/>
+        <h3>Affiliate Marketing</h3>
+        <p>Curated tools and resources to grow your business through strategic partnerships.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517242303087-0c34f45d2f9a?auto=format&fit=crop&w=800&q=60" alt="Templates"/>
+        <h3>Digital Products</h3>
+        <p>Ready-to-use templates and toolkits to accelerate your workflow.</p>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>Need help? We are here to optimize your automation.</p>
+  </footer>
 </body>
 </html>

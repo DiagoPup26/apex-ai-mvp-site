@@ -1,83 +1,132 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Affiliate Resources - Apex AI</title>
-  <style>
-    :root{--bg:#f4f4f9;--fg:#1a1f2a;--brand:#2563eb;--card:#fff;--success:#22c55e}
-    *{box-sizing:border-box}
-    body{font-family:Arial,sans-serif;margin:0;background:var(--bg);color:var(--fg)}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    .hero{background:url("https://images.unsplash.com/photo-1522869635100-9f9f97bdce7e?auto=format&fit=crop&w=1600&q=60") center/cover no-repeat;color:#fff;height:320px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
-    .hero:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5)}
-    .hero-content{position:relative;z-index:1}
-    .hero h1{font-size:32px;margin:0 0 10px}
-    nav{display:flex;justify-content:center;gap:15px;padding:20px 0}
-    nav a{color:var(--brand);text-decoration:none;font-weight:600}
-    .section{background:var(--card);border-radius:12px;padding:25px;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-    .section img{width:100%;max-width:400px;height:220px;object-fit:cover;border-radius:10px;float:left;margin:0 20px 15px 0}
-    .section:after{content:"";display:table;clear:both}
-    .cta{display:inline-block;padding:12px 20px;background:var(--brand);color:#fff;text-decoration:none;border-radius:8px}
-    form{margin-top:20px}
-    input[type=email]{padding:12px;width:300px;max-width:100%;border:1px solid #ddd;border-radius:6px;font-size:16px}
-    button{padding:12px 20px;background:var(--success);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:16px;margin-left:10px}
-    #msg{color:var(--success);margin-top:10px;display:none}
-    footer{text-align:center;padding:40px 0;color:#666}
-    @media(max-width:700px){.section img{float:none;width:100%;margin:0 0 15px}}
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Affiliate Resources — Apex AI Solutions</title>
+<meta name="description" content="Tools and programs Apex AI Solutions actually uses and recommends."/>
+<link rel="icon" href="favicon.png"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Affiliate Resources</h1>
-      <p>Tools and partners to grow your business</p>
-    </div>
-  </header>
-  
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="affiliate.html">Affiliates</a>
-    <a href="digital-products.html">Products</a>
-  </nav>
-  
-  <div class="container">
-    <div class="section">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=60" alt="Analytics dashboard"/>
-      <h2>High-Commission Programs</h2>
-      <p>We have curated the best affiliate programs with proven track records. These are tools we actually use and recommend.</p>
-      <ul>
-        <li><strong>AI Productivity Suite</strong> — 30% recurring commission</li>
-        <li><strong>Business Automation Tools</strong> — $50 per signup</li>
-        <li><strong>Design Resources</strong> — 20% commission on all sales</li>
-      </ul>
-      <a class="cta" href="#signup">Get Early Access</a>
-    </div>
-    
-    <div class="section" id="signup">
-      <h2>Join the Affiliate List</h2>
-      <p>Get exclusive deals, early access to new programs, and insider tips.</p>
-      <form onsubmit="handleSignup(event)">
-        <input type="email" id="email" placeholder="you@example.com" required/>
-        <button type="submit">Sign Up</button>
-      </form>
-      <p id="msg">Thanks! You are on the list.</p>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="navg1" x1="0" y1="32" x2="32" y2="0">
+          <stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#22D3EE"/>
+        </linearGradient></defs>
+        <path d="M16 3 L29 28 L20.5 28 L16 16.5 L11.5 28 L3 28 Z" fill="url(#navg1)"/>
+      </svg>
+      Apex AI Solutions
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="affiliate.html" class="current">Affiliate</a>
+      <a href="digital-products.html">Products</a>
+      <a href="updates.html">Updates</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section" style="padding-bottom:32px;">
+  <div class="wrap" style="max-width:820px;">
+    <span class="eyebrow"><span class="dot"></span> Affiliate Resources</span>
+    <h1 style="font-size:clamp(30px,4.5vw,44px); margin-top:18px;">
+      Tools we actually use, <span class="grad-text">not just list.</span>
+    </h1>
+    <p style="font-size:16.5px; max-width:600px; margin-top:14px;">
+      A short, curated set of programs with track records we've checked ourselves —
+      not a directory of everything with an affiliate link attached.
+    </p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap" style="max-width:820px;">
+    <hr class="divider" style="margin-top:0;">
+    <div class="grid-3">
+      <div class="card card-hover">
+        <div class="icon-tile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#navg1)" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+        </div>
+        <h3 style="font-size:16.5px;">AI Productivity Suite</h3>
+        <p style="font-size:14px;">30% recurring commission. Our pick for teams standardizing on one AI workspace.</p>
+      </div>
+      <div class="card card-hover">
+        <div class="icon-tile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#navg1)" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg>
+        </div>
+        <h3 style="font-size:16.5px;">Business Automation Tools</h3>
+        <p style="font-size:14px;">$50 per signup. The workflow automation stack we lean on for our own operations.</p>
+      </div>
+      <div class="card card-hover">
+        <div class="icon-tile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#navg1)" stroke-width="1.8"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+        </div>
+        <h3 style="font-size:16.5px;">Design Resources</h3>
+        <p style="font-size:14px;">20% commission on all sales. What we reach for whenever we need real design assets fast.</p>
+      </div>
     </div>
   </div>
-  
-  <footer>
-    <p>Questions? Reach out anytime.</p>
-  </footer>
-  
-  <script>
-    function handleSignup(e){
-      e.preventDefault();
-      const email=document.getElementById("email").value;
-      const list=JSON.parse(localStorage.getItem("affiliate_emails")||"[]");
-      list.push({email,date:new Date().toISOString()});
-      localStorage.setItem("affiliate_emails",JSON.stringify(list));document.getElementById("msg").style.display="block";
-      e.target.reset();
-    }
-  </script>
+</section>
+
+<section class="section-tight">
+  <div class="wrap" style="max-width:820px;">
+    <hr class="divider" style="margin-top:0;">
+    <div class="card" style="padding:36px;">
+      <h2 style="font-size:20px;">Get notified about new picks</h2>
+      <p style="font-size:14.5px; margin-top:6px;">
+        We add tools to this list slowly and only after using them ourselves —
+        expect a handful of emails a year, not a newsletter.
+      </p>
+      <form id="signupForm" style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
+        <input type="email" id="email" placeholder="you@example.com" required
+          style="flex:1; min-width:220px; padding:13px 16px; border-radius:10px; border:1px solid var(--border); background:var(--bg-alt); color:var(--text); font-size:14.5px;"/>
+        <button type="submit" class="btn btn-primary" style="border:none; font-size:14.5px;">Sign up</button>
+      </form>
+      <p id="msg" style="display:none; color:#22D3EE; margin-top:12px; font-size:14px;">Thanks — you're on the list.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="brand">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;">
+          <path d="M16 3 L29 28 L20.5 28 L16 16.5 L11.5 28 L3 28 Z" fill="url(#navg1)"/>
+        </svg>
+        Apex AI Solutions
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="affiliate.html">Affiliate Resources</a>
+        <a href="digital-products.html">Digital Products</a>
+        <a href="updates.html">Updates</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://thrills-place.github.io/thrillsplace-legal/terms.html">Terms of Service</a>
+        <a href="https://thrills-place.github.io/thrillsplace-legal/privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <p class="footer-fine">&copy; 2026 Apex AI Solutions. All experiments run with real capital and real disclosure.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var email = document.getElementById('email').value;
+  var list = JSON.parse(localStorage.getItem('apex_affiliate_signups') || '[]');
+  list.push({email: email, date: new Date().toISOString()});
+  localStorage.setItem('apex_affiliate_signups', JSON.stringify(list));
+  document.getElementById('msg').style.display = 'block';
+  e.target.reset();
+});
+</script>
+
 </body>
 </html>
